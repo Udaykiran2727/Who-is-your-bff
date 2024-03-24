@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your BFF</title>
+    <link rel="stylesheet" href="./home.css">
+    <style>
+        #image {
+            display: none;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Who is Your best friend?</h1>
+    <ul>
+        <li><button><a href="./its-my-thing-i-know-meme.png">Uday</a></button></li>
+        <li><button id="b1" onclick="appear()">Others</button> </li>
+    </ul>
+    <br><br>
+    <div>
+    <img id="image" src="./8bhfl8.png" alt="You serious bro?"></div>
+    <script>
+        x=document.getElementById('image');
+        var count=0;
+        function appear(){
+            if(count===0){
+                x.style.display = "block";
+                count=1;
+            }
+            else{
+                count+=0.1;
+                myscale();
+                
+            }
+        }
+        function myscale(){
+           x.style.transform = `scale(${count}, ${count})`;
+        }
+    </script>
+</body>
+</html>
